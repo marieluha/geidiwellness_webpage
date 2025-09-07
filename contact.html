@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>Kontakt – Geidi Raadik</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      background: url('OIP.jpg') center center / cover no-repeat;
+      font-family: "Century Gothic";
+      font-family: Arial, sans-serif;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-bar {
+      font-family: "Century Gothic";
+      background-color:#D1C7BE;/* #ccc;*/
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+    }
+
+    .top-bar .title {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    .top-bar .buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .button {
+      background-color: #eee;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      text-decoration: none;
+      color: black;
+      border-radius: 5px;
+    }
+
+    .star-button::after {
+      content: "★";
+      margin-left: 5px;
+    }
+
+    .overlay {
+      flex: 1;
+      background-color: rgba(255, 255, 255, 0.85); /* poolläbipaistev kiht */
+      padding: 20px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .left-panel {
+      font-family: "Century Gothic";
+      flex: 1;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .left-panel h2 {
+      font-size: 1.8em;
+      color: #333;
+      text-align: center;
+      font-family: "Century Gothic";
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .contact-item {
+      /*background-color: #eee;*/
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 1em;
+      color: #444;
+      margin-left: 3%;
+    }
+
+    
+      .right-panel {
+        /*background: url('OIP.jpg') center center / cover no-repeat;*/
+        background-color: rgba(255, 255, 255, 0); /* läbipaistvus pildi peal */
+        flex: 2;
+        border-radius: 10px;
+        padding: 20px;
+        
+}
+    
+
+    .right-panel h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .right-panel p {
+      font-size: 1em;
+      color: #333;
+    }
+
+    
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 5px;
+}
+
+.pin {
+  width: 20px; /* fikseeritud laius, et 📍 oleks joondatud */
+}
+
+.location {
+  text-decoration: none;
+  color: #333;
+  margin-left: 5px;
+  flex: 1;
+}
+
+.location:hover {
+  color: #D1C7BE;
+  /*text-decoration: underline;*/
+}
+
+
+.icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 6%;
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  margin-top: 8px;
+  
+}
+
+.contact-link:hover {
+  color: #D1C7BE;
+}
+
+/* Telefonile – väiksemad ekraanid */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-item {
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="title">geidi raadik</div>
+    <div class="buttons">
+      <a href="home.html" class="button">Home</a>
+      <button class="button">Button 1</button>
+      <button class="button">Button 2</button>
+      <button class="button star-button">Favourites</button>
+      <a href="contact.html" class="button">Kontakt</a>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="overlay">
+    <div class="left-panel">
+      <h2>Kontaktandmed</h2>
+      
+      <!--<div class="contact-item">📞 +372 5555 5555</div>-->
+      <a href="tel:+37255551234" class="contact-link">📞 +372 5555 5555</a>
+
+
+        <a href="mailto:geidi@example.com" class="contact-link">
+            <img src="gmail.png" class="icon" alt="E-mail">geidi@gmail.com</a>
+
+
+        <a href="https://www.instagram.com/letszgogeidi" target="_blank" class="contact-link">
+        <img src="instagram.png" class="icon" alt="Instagram">@letszgogeidi</a>
+
+        <a href="https://www.facebook.com/geidi" target="_blank" class="contact-link">
+            <img src="facebook.png" class="icon" alt="Facebook">Geidi Raadik</a>
+
+<br>
+<br>
+
+
+<div class="contact-item">
+  <div class="row">
+    <span class="pin">📍</span>
+    <a href="https://www.google.com/maps?hl=en&gl=ee&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x46eb37001c28c835:0x913ded7ececee407" target="_blank" class="location">
+        Tartu 24/7 fitness
+    </a>
+  </div>
+  <div class="row">
+    <span class="pin">📍</span>
+    <a href="https://www.google.com/maps/place/Viljandi+24%2F7+Fitness/@58.7196161,23.6866582,8z/data=!4m6!3m5!1s0x46ec99002dd15e77:0x77974cb2a48bcce!8m2!3d58.3450209!4d25.5786613!16s%2Fg%2F11lthzg028?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="location">
+        Viljandi 24/7 fitness (kokkuleppel)
+    </a>
+  </div>
+</div>
+
+
+      
+    </div>
+
+    <div class="right-panel">
+
+
+
+
+    </div>
+  </div>
+
+</body>
+</html>

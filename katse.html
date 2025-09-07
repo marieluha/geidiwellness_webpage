@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt – Geidi Raadik</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: "Century Gothic"; }
+
+    html, body { height: 100%; background: url('esimene.png') center center / cover no-repeat; display: flex; flex-direction: column; }
+
+    /* Top Bar */
+    .top-bar {
+      background-color: #D1C7BE;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .top-bar .title { font-weight: bold; font-size: 1.2em; }
+
+    .buttons { display: flex; gap: 10px; }
+
+    .button {
+      background-color: #eee;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      text-decoration: none;
+      color: black;
+      border-radius: 5px;
+    }
+
+    .star-button::after { content: "★"; margin-left: 5px; }
+
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .hamburger div { width: 25px; height: 3px; background-color: black; }
+
+    .dropdown {
+      display: none;
+      flex-direction: column;
+      background-color: #D1C7BE;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+    }
+
+    .dropdown a, .dropdown button {
+      padding: 10px 20px;
+      border-top: 1px solid #ccc;
+      background-color: #D1C7BE;
+      text-align: left;
+      width: 100%;
+    }
+
+    /* Overlay layout */
+    .overlay {
+      flex: 1;
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .left-panel {
+      flex: 1;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .left-panel h2 { font-size: 1.8em; color: #333; text-align: center; margin-bottom: 20px; }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: #333;
+      font-size: 1rem;
+      margin-top: 8px;
+      gap: 5px;
+    }
+
+    .contact-link:hover { color: #D1C7BE; }
+
+    .icon { width: 20px; height: 20px; }
+
+    .contact-item { margin-left: 3%; padding: 10px; }
+
+    .row { display: flex; align-items: flex-start; margin-bottom: 5px; }
+
+    .pin { width: 20px; }
+
+    .location { text-decoration: none; color: #333; flex: 1; }
+    .location:hover { color: #D1C7BE; }
+
+    .right-panel {
+      flex: 2;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: rgba(255,255,255,0);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .buttons { display: none; }
+      .hamburger { display: flex; }
+
+      .overlay { flex-direction: column; }
+      .left-panel { width: 100%; flex: unset; }
+      .right-panel { width: 100%; flex: unset; height: 50px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <img src="logo1.PNG" alt="Logo"  width="100" height="60">
+
+    <!--<div class="title">geidi raadik</div>-->
+
+    <div class="buttons">
+      <a href="kodu.html" class="button">Kodu</a>
+      <a href="katse3.html" class="button">Teenused</a>
+      <a href="katse.html" class="button">Kontakt</a>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="dropdown" id="dropdown">
+      <a href="kodu.html" class="button">Kodu</a>
+      <a href="katse3.html" class="button">Teenused</a>
+
+      <a href="katse.html" class="button">Kontakt</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="overlay">
+    <div class="left-panel">
+      <h2>Kontaktandmed</h2>
+
+      <a href="tel:+37255551234" class="contact-link">📞 +372 5661 1946</a>
+      <a href="mailto:geidi@example.com" class="contact-link">
+        <img src="gmail.png" class="icon" alt="E-mail"> geidi.raadik1@gmail.com
+      </a>
+      <a href="https://www.instagram.com/personaaltreener_geidi/" target="_blank" class="contact-link">
+        <img src="instagram.png" class="icon" alt="Instagram"> personaaltreener_geidi
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61577155203100" target="_blank" class="contact-link">
+        <img src="facebook.png" class="icon" alt="Facebook"> Personaaltreener Geidi
+      </a>
+
+      <br>
+      <br>
+
+      <a href="https://www.google.com/maps?hl=en&gl=ee&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x46eb37001c28c835:0x913ded7ececee407" target="_blank" class="contact-link">
+            📍 Tartu 24/7 fitness
+          </a>
+
+          <a href="https://www.google.com/maps/place/Viljandi+24%2F7+Fitness/@58.7196161,23.6866582,8z/data=!4m6!3m5!1s0x46ec99002dd15e77:0x77974cb2a48bcce!8m2!3d58.3450209!4d25.5786613!16s%2Fg%2F11lthzg028?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="contact-link">
+            📍 Viljandi 24/7 fitness (kokkuleppel)
+          </a>
+
+    </div>
+
+    <div class="right-panel">
+      <!-- Empty right panel -->
+    </div>
+  </div>
+
+  <!-- Hamburger JS -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const dropdown = document.getElementById('dropdown');
+
+    hamburger.addEventListener('click', () => {
+      dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+    });
+  </script>
+
+</body>
+</html>
